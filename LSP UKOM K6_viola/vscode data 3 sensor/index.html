@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Monitoring Kelembapan Tanah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="header">
+      <h1>Sistem Monitoring Kelembapan Tanah</h1>
+      <p class="subtitle">Berbasis ESP32 &mdash; Kontrol Pompa Otomatis</p>
+    </header>
+
+    <main>
+
+    <div class="card-grid sensor-grid">
+
+      <section class="card sensor-card">
+        <h2 class="card-title">Suhu Udara</h2>
+        <div class="gauge-wrap">
+          <svg class="gauge" viewBox="0 0 200 120">
+            <path class="gauge-bg" d="M10,110 A90,90 0 0,1 190,110" />
+            <path id="gaugeTemp" class="gauge-fill" d="M10,110 A90,90 0 0,1 190,110" />
+          </svg>
+          <div class="gauge-number">
+            <span id="tempValue">--</span><span class="unit">&deg;C</span>
+          </div>
+        </div>
+        <p class="status-text" id="tempStatus">Menunggu data...</p>
+      </section>
+
+      <section class="card sensor-card">
+        <h2 class="card-title">Kelembapan Udara</h2>
+        <div class="gauge-wrap">
+          <svg class="gauge" viewBox="0 0 200 120">
+            <path class="gauge-bg" d="M10,110 A90,90 0 0,1 190,110" />
+            <path id="gaugeHum" class="gauge-fill" d="M10,110 A90,90 0 0,1 190,110" />
+          </svg>
+          <div class="gauge-number">
+            <span id="humValue">--</span><span class="unit">%</span>
+          </div>
+        </div>
+        <p class="status-text" id="humStatus">Menunggu data...</p>
+      </section>
+
+      <section class="card sensor-card">
+        <h2 class="card-title">Kelembapan Tanah</h2>
+        <div class="gauge-wrap">
+          <svg class="gauge" viewBox="0 0 200 120">
+            <path class="gauge-bg" d="M10,110 A90,90 0 0,1 190,110" />
+            <path id="gaugeValue" class="gauge-fill" d="M10,110 A90,90 0 0,1 190,110" />
+          </svg>
+          <div class="gauge-number">
+            <span id="soilValue">--</span><span class="unit">%</span>
+          </div>
+        </div>
+        <p class="status-text" id="soilStatus">Menunggu data...</p>
+      </section>
+
+    </div>
+
+    <div class="card-grid control-grid">
+
+      <section class="card pump-card">
+        <h2 class="card-title">Kontrol Kipas</h2>
+        <div class="pump-icon" id="fanIcon">🌀</div>
+        <p class="pump-status">Status: <span id="fanStatusText">OFF</span></p>
+
+        <label class="switch">
+          <input type="checkbox" id="fanToggle">
+          <span class="slider"></span>
+        </label>
+
+        <p class="hint">Geser untuk menyalakan/mematikan kipas secara manual</p>
+      </section>
+
+      <section class="card pump-card">
+        <h2 class="card-title">Kontrol Pompa Air</h2>
+        <div class="pump-icon" id="pumpIcon">💧</div>
+        <p class="pump-status">Status: <span id="pumpStatusText">OFF</span></p>
+
+        <label class="switch">
+          <input type="checkbox" id="pumpToggle">
+          <span class="slider"></span>
+        </label>
+
+        <p class="hint">Geser untuk menyalakan/mematikan pompa secara manual</p>
+      </section>
+
+    </div>
+
+    </main>
+
+    <footer class="footer">
+      <p>Dibuat oleh <strong>VIOLA REFRIAN PUTRI (21122456)</strong></p>
+      <p class="footer-sub">Ujian Kompetensi &mdash; Sistem Komputer</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
