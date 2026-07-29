@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Monitoring Tanaman - Heru Fadilah Satyaputra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <h1>Sistem Monitoring & Kontrol Tanaman</h1>
+    <p class="nama">Heru Fadilah Satyaputra</p>
+    <p id="status">Menghubungkan ke alat...</p>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Suhu</h2>
+      <p class="nilai" id="suhu">--</p>
+      <span>&deg;C</span>
+    </div>
+
+    <div class="card">
+      <h2>Kelembaban Udara</h2>
+      <p class="nilai" id="kelembaban">--</p>
+      <span>%</span>
+    </div>
+
+    <div class="card">
+      <h2>Kelembaban Tanah</h2>
+      <p class="nilai" id="tanah">--</p>
+      <span>%</span>
+    </div>
+
+  </div>
+
+  <div class="kontrol">
+    <div class="tombol-box">
+      <h3>Pompa Air</h3>
+      <button id="btnPumpOn" onclick="pumpOn()">ON</button>
+      <button id="btnPumpOff" onclick="pumpOff()">OFF</button>
+      <p>Status: <span id="statusPump">OFF</span></p>
+    </div>
+
+    <div class="tombol-box">
+      <h3>Kipas</h3>
+      <button id="btnFanOn" onclick="fanOn()">ON</button>
+      <button id="btnFanOff" onclick="fanOff()">OFF</button>
+      <p>Status: <span id="statusFan">OFF</span></p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Update otomatis tiap 2 detik</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
